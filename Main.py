@@ -1,24 +1,28 @@
-url = "http://youtube.com"
-my_str = url.replace("http://", "")
+import random
+weather = "rain"
 
-my_str = my_str[:my_str.index(".")]
-print(my_str)
+if weather == "rain" :
+  print("A")
+elif weather == "Snow" :
+  print("B")
+else :
+  print("C")
 
-word = my_str[:3] + str(len(my_str)) + str(my_str.count("e")) + "!"
+we = int(input("˚C? :"))
+if 30 <= we :
+  print("So Hot")
+elif 20 <= we < 30 :
+  print("So So")
+elif 10 <= we < 20 :
+  print("nice")
+else :
+  print("cold")
 
-print(word)
-
-subway = ["A","B","C","A","A"]
-print(subway)
-print(subway.index("A"))
-print(subway[1])
-print(subway.count("A"))
-print(subway.pop())
-print(subway)
-print(subway.count("A"))
-subway.sort()
-print(subway)
-subway.reverse()
-print(subway)
-subway.clear()
-print(subway)
+i = 1
+People = 0
+for i in range(1,51):
+  Time = random.randint(5,50)
+  print("Person ", i , "[Driving time :" , Time , "]")
+  if 5 <= Time <= 15 :
+    People += 1
+print("Number of passengers to pick up:", People)
