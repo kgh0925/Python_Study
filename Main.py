@@ -1,51 +1,52 @@
-def open_account() :
-  print("create account.")
+import turtle as t
+def box(pos_x,pos_y,x,y,color) :
+  t.speed('fast') # slowest,slow,normal,fast,fastest
+  t.penup()
+  t.goto(pos_x,pos_y)
+  t.pendown()
+  t.color(color)
+  t.begin_fill()
+  t.fd(x)
+  t.left(90)
+  t.fd(y)
+  t.left(90)
+  t.fd(x)
+  t.left(90)
+  t.fd(y)
+  t.end_fill()
+  t.left(90)
 
-def deposit(balance, money):
-  print("The deposit has been completed. The balance is {0}.".format(balance + money))
-  return balance + money
+"""
+turtle.showturtle()
+turtle.hideturtle()
+turtle.penup()
+turtle.goto()
+turtle.pendown()
+turtle.color()
+turtle.pensize()
+turtle.circle()
+turtle.write()
+turtle.forward()
+turtle.backward()
+turtle.right()
+turtle.left()
+"""
+t.shape('turtle')
 
-def withdraw(balance, money) :
-  if balance >= money :
-    print(money, "has been withdrawn. The balance is {0}.".format(balance - money))
-    return balance
-  else :
-    print("The amount you want to withdraw is higher than the amount you have, so you cannot withdraw.")
 
+box(-100,-165,100,40,"green")
+box(100,-165,100,40,"green")
+box(-70,-125,40,70,"blue")
+box(130,-125,40,70,"blue")
+box(-85,-55,270,200,"orange")
+box(-185,70,100,20,"red")
+box(185,70,100,20,"red")
+t.penup()
+t.goto(50,145)
+t.pendown()
+t.color("bisque")
+t.begin_fill()
+t.circle(50)
+t.end_fill()
 
-balance = 0
-balance = deposit(balance,1000)
-print(balance)
-balance = withdraw(balance,1200)
-
-def profile(name, age, main_lang="Python") :
-  print("Name : {0}\t Age : {1}\t Main_Lang : {2}".format(name, age, main_lang))
-"""def인수에 기본값을 넣을 때는 뒤에서부터 채울것 
-When you put the default value in the def argument, fill it from the back."""
-profile("Kim Geun Ho", "22", "Python")
-profile("KGH","22")
-
-def profile_1(name,age,l1,l2,l3,l4,l5):
-  print("Name :{0}\t Age:{1} \t".format(name,age), end=" ")
-  print(l1,l2,l3,l4,l5)
-profile_1("KGH", 22, "C", "C++","C#","Python","Java")
-
-gun = 10
-
-def cp(soldiers):
-  gun = 20
-  gun = gun - soldiers
-  print("The gun amount left in the function : {0}".format(gun))
-
-print("All the Gun :{0}".format(gun))
-cp(2)
-print("The remaining gun : {0}".format(gun))
-
-def cp_r(gun,soldiers):
-  gun = gun - soldiers
-  print("The gun amount left in the function : {0}".format(gun))
-  return gun
-
-print("All the Gun :{0}".format(gun))
-gun = cp_r(gun,2)
-print("The remaining gun : {0}".format(gun))
+t.hideturtle()

@@ -169,4 +169,57 @@ def cp_r(gun,soldiers):
 print("All the Gun :{0}".format(gun))
 gun = cp_r(gun,2)
 print("The remaining gun : {0}".format(gun))
+[day6]
+import turtle as t
+def box(pos_x,pos_y,x,y,color) :
+  t.speed('fast') # slowest,slow,normal,fast,fastest
+  t.penup()
+  t.goto(pos_x,pos_y)
+  t.pendown()
+  t.color(color)
+  t.begin_fill()
+  t.fd(x)
+  t.left(90)
+  t.fd(y)
+  t.left(90)
+  t.fd(x)
+  t.left(90)
+  t.fd(y)
+  t.end_fill()
+  t.left(90)
+
+
+turtle.showturtle()
+turtle.hideturtle()
+turtle.penup()
+turtle.goto()
+turtle.pendown()
+turtle.color()
+turtle.pensize()
+turtle.circle()
+turtle.write()
+turtle.forward()
+turtle.backward()
+turtle.right()
+turtle.left()
+
+t.shape('turtle')
+
+
+box(-100,-165,100,40,"green")
+box(100,-165,100,40,"green")
+box(-70,-125,40,70,"blue")
+box(130,-125,40,70,"blue")
+box(-85,-55,270,200,"orange")
+box(-185,70,100,20,"red")
+box(185,70,100,20,"red")
+t.penup()
+t.goto(50,145)
+t.pendown()
+t.color("bisque")
+t.begin_fill()
+t.circle(50)
+t.end_fill()
+
+t.hideturtle()
 """
