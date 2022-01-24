@@ -169,7 +169,9 @@ def cp_r(gun,soldiers):
 print("All the Gun :{0}".format(gun))
 gun = cp_r(gun,2)
 print("The remaining gun : {0}".format(gun))
+
 [day6]
+
 import turtle as t
 def box(pos_x,pos_y,x,y,color) :
   t.speed('fast') # slowest,slow,normal,fast,fastest
@@ -236,5 +238,65 @@ t.color("black")
 t.begin_fill()
 t.circle(5)
 t.end_fill()
+t.hideturtle()
+
+[day7]
+
+import turtle as t
+
+t.shape("turtle")
+t.speed("fastest")
+
+t.width(10)
+
+t.penup()
+t.goto(0,100)
+t.pendown()
+t.fillcolor("orange")
+t.circle(-170,30)
+t.right(90)
+t.begin_fill()
+t.circle(60)
+t.end_fill()
+t.left(90)
+t.circle(-170,300)
+t.left(90)
+t.begin_fill()
+t.circle(60)
+t.end_fill()
+t.right(90)
+t.begin_fill()
+t.circle(-170,390)
+t.end_fill()
+t.width(20)
+t.penup()
+t.goto(-90,-10)
+t.pendown()
+t.fd(50)
+
+t.penup()
+t.goto(40,-10)
+t.pendown()
+t.fd(50)
+t.width(10)
+
+t.penup()
+t.color("black")
+t.goto(-65,-55)
+t.pendown()
+t.circle(4)
+
+t.penup()
+t.color("black")
+t.goto(65,-55)
+t.pendown()
+t.circle(4)
+
+#From No. 52 to 55, it is still being revised.
+t.penup() 
+t.goto(20,-150)
+t.pendown()
+t.circle(-20,200)
+
 t.hideturtle()
 """
